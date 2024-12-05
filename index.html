@@ -5,24 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>goit-js-hw-11</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-Bgfrje-I.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5ObWk2rO.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-7LxPzcML.css">
   </head>
   <body>
     <main>
       <form class="search-form" id="search-form">
         <input
-          class="search-form-input"
+          class="form-input"
           type="text"
           name="searchQuery"
           placeholder="Search images..."
         />
-        <button class="search-form-btn" type="submit">Search</button>
+        <button class="form-btn" type="submit">Search</button>
       </form>
 
-      <span class="loader"></span>
+      <span id="loader" class="hidden"></span>
 
       <div class="gallery"></div>
     </main>
