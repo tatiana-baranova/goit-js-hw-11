@@ -1,5 +1,3 @@
-import iziToast from "izitoast";
-
 export default getImages;
 
 function getImages(query) {
@@ -25,8 +23,6 @@ const API_KEY = "47418994-53b3f5e850acd57effb8c0e9d";
             iziToast.error({
                 title: "Error",
                 message: "Sorry, there are no images matching your search query. Please try again!",
-                color: '#ef4040',
-                close: false,
                 position: 'topRight',
         })
     })

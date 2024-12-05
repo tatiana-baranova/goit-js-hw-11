@@ -3,7 +3,7 @@ function reflectionImages(images) {
     return images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
     <a class="gallery-item" href="${largeImageURL}">
     <div class="gallery-image">
-    <img src="${webformatURL}" alt="${tags}">
+    <img class="image" src="${webformatURL}" alt="${tags}">
     <div class="description">
     <p>Likes: <span>"${likes}"</span></p>
     <p>Views: <span>"${views}"</span></p>
