@@ -4,11 +4,25 @@ function reflectionImages(images) {
     <a class="gallery-item" href="${largeImageURL}">
     <div class="gallery-image">
     <img class="image" src="${webformatURL}" alt="${tags}">
-    <div class="description">
-    <p>Likes: <span>"${likes}"</span></p>
-    <p>Views: <span>"${views}"</span></p>
-    <p>Comments: <span>"${comments}"</span></p>
-    <p>Downloads: <span>"${downloads}"</span></p>
+    <div>
+    <ul class="description">
+    <li class="list-info">
+    <h3 class="info-img">Likes</h3>
+    <p class="text-img">${likes}</p>
+    </li>
+    <li class="list-info">
+    <h3 class="info-img">Views</h3>
+    <p class="text-img">${views}</p>
+    </li>
+    <li class="list-info">
+    <h3 class="info-img">Comments</h3>
+    <p class="text-img">${comments}</p>
+    </li>
+    <li class="list-info">
+    <h3 class="info-img">Downloads</h3>
+    <p class="text-img">${downloads}</p>
+    </li>
+    </ul>
     </div>
     </div>
     </a>

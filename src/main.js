@@ -12,9 +12,8 @@ import reflectionImages from "./js/render-function.js";
 const formSearch = document.querySelector(".search-form");
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector("#loader");
-
-// console.log(loader);
-
+console.log(loader);
+console.log("Before:", loader.classList);
 
 let lightbox = new SimpleLightbox(".gallery-item", {
     captions: true,
@@ -36,14 +35,17 @@ function handleSearch(event) {
             message: "Please enter a search query!",
             position: "topRight",
         });
+        event.target.reset();
         return;
     }
     gallery.innerHTML = "";
-
-    loader.classList.remove("hidden");
-    // console.log(loader.classList.remove("hidden"));
-    
-    
+    console.log("Before showing loader:", loader.classList);
+    if (loader.classList.contains("hidden")) {
+        loader.classList.replace("hidden", "loader");
+    } else {
+        loader.classList.add("loader");
+    }
+    console.log("After showing loader:", loader.classList);
 
     getImages(query)
         .then(data => {
@@ -67,9 +69,14 @@ function handleSearch(event) {
             });
         })
         .finally(() => {
-            loader.classList.add("hidden");
-            // console.log(loader.classList.add("hidden"));
-            
+            console.log("Before hiding loader:", loader.classList);
+            if (loader.classList.contains("loader")) {
+                loader.classList.replace("loader", "hidden");
+            } else {
+                loader.classList.add("hidden");
+            }
+            console.log("After hiding loader:", loader.classList);
+
             event.target.reset();
         });
 }
