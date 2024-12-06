@@ -12,8 +12,6 @@ import reflectionImages from "./js/render-function.js";
 const formSearch = document.querySelector(".search-form");
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector("#loader");
-console.log(loader);
-console.log("Before:", loader.classList);
 
 let lightbox = new SimpleLightbox(".gallery-item", {
     captions: true,
@@ -39,13 +37,13 @@ function handleSearch(event) {
         return;
     }
     gallery.innerHTML = "";
-    console.log("Before showing loader:", loader.classList);
+    // console.log("Before showing loader:", loader.classList);
     if (loader.classList.contains("hidden")) {
         loader.classList.replace("hidden", "loader");
     } else {
         loader.classList.add("loader");
     }
-    console.log("After showing loader:", loader.classList);
+    // console.log("After showing loader:", loader.classList);
 
     getImages(query)
         .then(data => {
@@ -69,13 +67,13 @@ function handleSearch(event) {
             });
         })
         .finally(() => {
-            console.log("Before hiding loader:", loader.classList);
+            // console.log("Before hiding loader:", loader.classList);
             if (loader.classList.contains("loader")) {
                 loader.classList.replace("loader", "hidden");
             } else {
                 loader.classList.add("hidden");
             }
-            console.log("After hiding loader:", loader.classList);
+            // console.log("After hiding loader:", loader.classList);
 
             event.target.reset();
         });

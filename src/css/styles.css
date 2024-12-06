@@ -28,14 +28,6 @@
   margin: 0 auto 32px;
   width: 371px;
   height: 40px;
-  /* display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 8px;
-  width: 371px;
-  height: 40px;
-  margin: auto; */
   margin-top: 36px;
   margin-bottom: 32px;
 }
@@ -55,6 +47,10 @@
   border-radius: 4px;
   padding-left: 16px;
 
+}
+
+.form-input:focus {
+  border: 1px solid #4e75ff;
 }
 
 .form-btn {
@@ -77,8 +73,11 @@
   margin-left: 8px;
 }
 
+.form-btn:hover {
+  background-color: #6c8cff;
+}
+
 .gallery {
-  /* display: flex; */
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -114,7 +113,6 @@
   line-height: 1.33333;
   letter-spacing: 0.04em;
   color: black;
-  /* font-weight: bold; */
 }
 
 
